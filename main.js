@@ -194,14 +194,20 @@ pauseMusic = function () {}
 
 const musicSongs = document.querySelectorAll('.music-song')
 
+
+
 musicSongs.forEach(musicSong => {
     const musicAudio = musicSong.querySelector('.audio-music')
+    musicSong.addEventListener('click', function () {
+        musicSongs.forEach(song => song.classList.remove('active'))
+        this.classList.add('active')       
+    })
 
-    musicSong.onclick = function() {      
+    musicSong.onclick = function() {   
+
         chooseSong.innerHTML = this.textContent
         popup.classList.toggle('hide-popup')
         musicDropdown.classList.toggle('active')
-
         let musicId = musicAudio.dataset.sound
         let music = document.querySelector(`[data-sound=${musicId}]`)
 
