@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pomodoro with music !</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <main class="app">
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <div
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            Pomodoro
+          </div>
+          <div
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="js-short-break"
+          >
+            Short break
+          </div>
+          <div
+            data-mode="longBreak"
+            class="button mode-button"
+            id="js-long-break"
+          >
+            Long break
+          </div>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        
+<!-- Music section -->
+        <div class="music-section">
+          <div class="music-container">
+            <div id="pick-song" class="music-player">
+                <p id="choose-song" >Choose a song</p>
+            </div>
+            <div id="music-dropdown" class="music-dropdown">
+              <i class='bx bx-chevron-down'></i>
+            </div>
+            <div id="music-popup" class="hide-popup"> 
+              <ul class="playlist music-list">
+                <li class="music-song">Without music
+                  <audio class="audio-music" src="" data-sound= 'music' ></audio>
+                </li>
+                <li class="music-song">[Piano] A Sunny Morning in Japan
+                  <audio class="audio-music"  src="./Sounds/morning_music.mp3" data-sound="music_1"></audio>
+                </li>
+                <li class="music-song">[Piano] A Rainy Day in Shibuya, Tokyo
+                  <audio class="audio-music"  src="./Sounds/rain.mp3" data-sound="music_2"></audio>
+                </li>
+                <li class="music-song">[Piano] Afternoon Lounge Jazz
+                  <audio class="audio-music"  src="./Sounds/Afternoon.mp3" data-sound="music_3"></audio>
+                </li>
+                <li class="music-song">[Piano] gentle rain sound
+                  <audio class="audio-music" src="./Sounds/Piano and rain.mp3" data-sound="music_4"></audio>
+                </li>
+                <li class="music-song">[Playlist] 6am morning grind | trendy-hiphop
+                  <audio class="audio-music" src="./Sounds/Rainbow.mp3" data-sound="music_5"></audio>
+                </li>
+                <li class="music-song">[Playlist] When you go to the beach
+                  <audio class="audio-music" src="./Sounds/Sunset at beach.mp3" data-sound="music_6"></audio>
+                </li>
+                <li class="music-song">[Playlist] Come sit next to me and let's listen to this together
+                  <audio class="audio-music" src="./Sounds/Pink paris.mp3" data-sound="music_7"></audio>
+                </li>
+                <li class="music-song">[Playlist] I'm alone in Paris
+                  <audio class="audio-music" src="./Sounds/Paris.mp3" data-sound="music_8"></audio>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </main>
+    <div class="hidden">
+      <audio src="./Sounds/backtowork.mp3" data-sound="pomodoro"></audio>
+      <!-- <audio src="./Sounds/break.mp3" data-sound="shortBreak"></audio>
+      <audio src="./Sounds/break.mp3" data-sound="longBreak"></audio> -->
+      <!-- <audio src="./Sounds/morning_music.mp3" data-sound="music"></audio> -->
+
+    </div>
+    <script src="main.js">
+
+    </script>
+  </body>
+</html>
